@@ -1,0 +1,340 @@
+/* CSS 初始化代码 css reset */
+/* 清除元素默认的内外边距 */
+*{
+	margin: 0;
+	padding: 0;
+}
+/* 清除列表样式 */
+li {
+	list-style: none;
+}
+button {
+	border: none;
+}
+body {
+	background-color: #f3f5f7;
+	/* 方便写代码 别忘记删 */
+	/* height: 3000px; */
+}
+
+/* //清除浮动带来的影响 */
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom:1;
+}
+
+a {
+	text-decoration: none;
+}
+/* 版心 1200 水平居中 */
+.w {
+	width: 1200px;
+	margin: auto;
+}
+.header {	
+	height: 42px;
+	/* background-color: pink; */
+	/* 外边距 上下30 左右auto */
+	margin: 30px auto;	
+}
+.logo {
+	float: left;
+	padding-right: 70px;
+}
+.nav {
+	float: left;
+	
+}
+.nav ul li {
+	float: left;
+}
+.nav ul li a {
+	display: block;
+	height: 40px;
+	padding: 0 10px;
+	margin-right: 20px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #050505;
+	text-decoration: none;
+}
+/* 鼠标经过链接才有底边框 */
+.nav ul li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+.search {
+	float: left;
+	margin-left: 70px;
+	
+}
+.search input {
+	/* 会撑大盒子 要减去内边距的值 */
+	width: 340px;	/* 360 */
+	height: 40px;
+	float: left;
+	border: 1px solid #00A4FF;
+	padding-left: 20px;
+	color: #bfbfbf;
+}
+.search button {
+	float: left;
+	width: 50px;
+	height: 42px;
+	background: url(images/btn.png);
+	
+}
+.user {
+	float: left;
+	height: 42px;
+	
+	line-height: 42px;   /* 无效 单行文本居中 */
+	
+	margin-left: 30px;
+	font-size: 14px;
+	color: #666;	
+}
+.user img {
+	
+}
+/* banner开始 */
+.banner {
+	height: 420px;
+	background: #1c036c url(images/banner2.png) no-repeat top center /* 水平靠上居中 */;
+	
+}
+.subnav {
+	float: left;
+	width: 150px;  /* 190 */
+	height: 420px;
+	padding: 0 20px;  /* 上下0 左右20 宽度要减去*/
+	/* 背景半透明 */
+	background: rgb(0,0,0,0.3); 
+	
+}
+.subnav span {
+	float: right; 
+}
+.subnav ul li {
+	height: 45px;
+	line-height: 45px;	
+}
+.subnav ul li a {
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+}
+.subnav ul li a:hover {
+	color: #00b4ff;	
+}
+.course {
+	/* course 子盒子有了浮动 就不会有外边距塌陷的问题 */
+	float: right;
+	width: 228px;
+	height: 300px;
+	background: #fff;
+	margin-top: 50px; 	
+}
+.course-hd {
+	height: 48px;
+	background-color: #9bceea;
+	font-size: 18px;
+	text-align: center;
+	line-height: 48px;
+	/* 文字加粗 */
+	/* font-weight: bold; */
+	font-weight: 700px;
+	color: #fff;
+}
+.course-bd {
+	/* 没有宽度的盒子 padding不会撑开盒子 */
+	padding: 0 15px;	
+}
+.course-bd ul {
+	/* 外边距塌陷问题 ul 是标准流 */
+	/* margin-top: 10px; */
+	padding-top: 10px;
+}
+.course-bd li {
+	/* 行高=高度只能让单行文本居中 */
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+.course-bd li h4 {
+	font-size: 14px;
+	color: #4e4e4e;
+}
+.course-bd li p {
+	font-size: 12px;
+	color: #a5a5a5;
+}
+.all {
+	display: block;
+	height: 38px;
+	border: 0 solid #00A4FF;
+	margin-top: 10px;
+	font-size: 16px;
+	color: #00A4FF;
+	text-align: center;
+	line-height: 38px;
+}
+.all:hover {
+	background-color: #00b4ff;
+	color: #fff;
+}
+/* banner结束 */
+
+/* goods开始 */
+.goods {
+	height: 60px;
+	background-color: #fff;
+	margin-top: 4px;
+	/* 利用行高可继承的特性 */
+	line-height: 60px;
+	/* 盒子阴影 */
+	box-shadow: 2px 2px 2px rgb(0,0,0,.3);
+	
+}
+.goods h3 {
+	float: left;
+	font-size: 16px;
+	margin: 0 30px;	
+}
+.goods h3 a {
+	color: #00A4FF;
+}
+.goods-item {
+	float: left;
+	color: #BFBFBF;
+}
+.goods-item a {
+	font-size: 16px;
+	color: #050505;
+	margin: 0 30px;	
+}
+.goods-item a:hover {
+	color: #00A4FF;
+}
+.goods-r {
+	float: right;
+	font-size: 14px;
+	margin-right: 25px;
+}
+.goods-r a {
+	color: #00A4FF;
+}
+.goods-r a:hover {
+	color: #00B4FF;
+}
+/* goods结束 */
+
+/* box 开始 */
+.box {
+	margin-top: 15px;
+	
+}
+.box-hd {
+	height: 60px;
+	line-height: 60px;
+}
+.box-hd h3 {
+	float: left;
+	font-size: 20px;
+	color: #494949;
+	/* 让粗体不加粗 400 == normal*/
+	font-weight: 400;
+}
+.box-hd a {
+	float: right;
+	margin-right: 30px;
+	font-size: 12px;
+	color: #a5a5a5;
+}
+.box-bd {
+	/* 子盒子宽度可以比父盒子宽 */
+	/* 超过版心1200 */
+	width: 1215px;
+	
+}
+.box-bd ul li {
+	width: 228px;
+	height: 270px;
+	background-color: #fff;
+	float: left;
+	/* 当盒子宽度不够时会掉下去 */
+	margin-right: 15px;
+	margin-bottom: 15px;
+	/* 盒子阴影 */
+	box-shadow: 2px 2px 2px rgb(0, 0, 0, .3);
+}
+.box-bd  li img {
+	width: 100%;
+}
+.box-bd  li h4 {
+	font-size: 14px;
+	font-weight: 400;
+	color: #050505;
+	margin: 20px;
+}
+.box-bd  li p {
+	margin: 0 20px;
+	font-size: 12px;
+	color: #dadada;
+}
+.box-bd  li span {
+	color: #ff7c2d;
+}
+/* box 结束 */
+
+/* footer start */
+.footer {
+	height: 385px;
+	padding-top: 30px; /* 要减去 */
+	background-color: #fff;
+}
+.copyright {
+	float: left;
+}
+.copyright p {
+	font-size: 12px;
+	color: #666;
+	margin: 20px 0 15px 0;	
+}
+.app {
+	display: block;
+	width: 118px;
+	height: 34px;
+	border: 1px solid #00A4FF;
+	text-align: center;
+	line-height: 34px;
+	font-size: 16px;
+	color: #00A4FF;
+}
+.links {
+	float: right;
+}
+
+.links dl {
+	float: left;
+	margin-left: 100px;
+}
+.links dt {
+	height: 35px;
+	font-size: 16px;
+	/* color: #333; */
+}
+.links dd a {
+	font-size: 12px;
+	color: #333;
+}
+.links a:hover {
+	color: #00A4FF;
+}
+/* footer end */
